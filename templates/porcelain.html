@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% block title %} Porcelain {% endblock title %} {%
+endblock content %} {% block body %} {% load static %}
+
+<div class="fullwidth-template">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 menunew25 menu" style="display: none">
+        <div class="navbar-collapse">
+          <ul
+            id="menu-main-menu"
+            class="nav nav-pills nav-stacked menu"
+            style="display: none"
+          >
+            <li id="test1" class="menu-item" runat="server">
+              <a href="/porcelain" onclick="addClassToLi()">PORCELAIN</a>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="/porcelain-indoor">Porcelain Indoor</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Porcelain Outdoor</a>
+                </li>
+              </ul>
+            </li>
+            <li id="test2" class="menu-item" runat="server">
+              <a href="/veneer">VENEER</a>
+            </li>
+            <li id="test3" class="menu-item" runat="server">
+              <a href="/spc">SPC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <section class="hero-slider hero-style">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a class="explorer" href="/product-category/walling/">
+                  <img
+                    src="static/images/outdoor.jpeg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <p>Explore The full range</p>
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Exquisite Outdoor</h5>
+                  <p>
+                    Give your outdoor living space a luxurious touch with our
+                    exquisite range of superior quality natural stone pavers and
+                    tiles. The beauty of natural paving stones is their subtle
+                    uniqueness in colour and texture that add opulence to any
+                    space.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a class="explorer" href="/product-category/walling/">
+                  <img
+                    src="static/images/Breccia_beige.webp"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <p>Explore The full range</p>
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Exclusive Indoor</h5>
+                  <p>
+                    Whether you want to create a classical appearance or have a
+                    minimalistic and simple outlook, our range of indoor tiles
+                    will complement your style of living and give a dreamy look
+                    to your space.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a class="explorer" href="/product-category/walling/">
+                  <img
+                    src="static/images/Modern_pool.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <p>Explore The full range</p>
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Modern Pool</h5>
+                  <p>
+                    Give your pool surround a sophisticated touch with unique
+                    colours and muted tones. A design-savvy pool that will make
+                    you want to dive right in and float the day away.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  {
+    var li = parent.document.getElementById("test1");
+    li.classList.add("active");
+  }
+</script>
+
+{% endblock body %}
